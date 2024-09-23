@@ -1,0 +1,12 @@
+create schema cars;
+use cars;
+ select * from  car_dekho;
+select count(*) from car_dekho;
+select count(*) from car_dekho where year  = 2023;
+select count(*) from car_dekho where year in(2020,2021,2022) group by year;
+select year, count(*) from car_dekho group by year;
+select count(*)  from car_dekho where year = 2020 and fuel = "diesel";
+select year,fuel, count(*)  from car_dekho where fuel in("petrol","diesel","CNG") group by year,fuel;
+select year, count(*)  from car_dekho group by year having count(*) >100;
+select count(*) from car_dekho where year between 2015 and 2023;
+select*from car_dekho where year between 2015 and 2023;
